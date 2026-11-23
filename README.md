@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://hub.guuguo.top/assets/mangainlay-banner-dark.png" />
-  <source media="(prefers-color-scheme: light)" srcset="https://hub.guuguo.top/assets/mangainlay-banner-light.png" />
-  <img src="https://hub.guuguo.top/assets/mangainlay-banner-light.png" alt="漫嵌 MangaInlay — 生肉漫画与条漫原位气泡嵌字翻译插件" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://hub.guuguo.top/assets/mangainlay-banner-dark.png?v=20261123v3" />
+  <source media="(prefers-color-scheme: light)" srcset="https://hub.guuguo.top/assets/mangainlay-banner-light.png?v=20261123v3" />
+  <img src="https://hub.guuguo.top/assets/mangainlay-banner-light.png?v=20261123v3" alt="漫嵌 MangaInlay — 生肉漫画与条漫原位气泡嵌字翻译插件" width="100%" />
 </picture>
 
 # 漫嵌 MangaInlay
@@ -19,7 +19,7 @@
 
 <br />
 
-<img src="https://hub.guuguo.top/assets/mangainlay-demo-github.gif" width="800" alt="漫嵌 MangaInlay 实机演示：滚动生肉页、墨迹浮现中文气泡、按住 Alt 看原图" />
+<img src="https://hub.guuguo.top/assets/mangainlay-demo-github.gif?v=20261123v3" width="800" alt="漫嵌 MangaInlay 实机演示：滚动生肉页、墨迹浮现中文气泡、按住 Alt 看原图" />
 
 </div>
 
@@ -52,7 +52,7 @@
 
 | 爆炸气泡不糊（日漫竖排） | 拟声词与倾斜门牌保留原画 | 多色无框字重排（繁/日/韩 → 简体） |
 | :---: | :---: | :---: |
-| <img src="https://hub.guuguo.top/assets/compare-burst-before.png" width="200" alt="爆炸气泡生肉" /> <img src="https://hub.guuguo.top/assets/compare-burst-after.png" width="200" alt="爆炸气泡中文嵌字" /> | <img src="https://hub.guuguo.top/assets/compare-sign-before.png" width="200" alt="倾斜门牌生肉" /> <img src="https://hub.guuguo.top/assets/compare-sign-after.png" width="200" alt="倾斜门牌平行旁注" /> | <img src="https://hub.guuguo.top/assets/compare-caption-before.png" width="220" alt="红黑无框生肉" /> <img src="https://hub.guuguo.top/assets/compare-caption-after.png" width="220" alt="干净居中重排中文" /> |
+| <img src="https://hub.guuguo.top/assets/compare-burst-before.png?v=20261123v3" width="200" alt="爆炸气泡生肉" /> <img src="https://hub.guuguo.top/assets/compare-burst-after.png?v=20261123v3" width="200" alt="爆炸气泡中文嵌字" /> | <img src="https://hub.guuguo.top/assets/compare-sign-before.png?v=20261123v3" width="200" alt="倾斜门牌生肉" /> <img src="https://hub.guuguo.top/assets/compare-sign-after.png?v=20261123v3" width="200" alt="倾斜门牌平行旁注" /> | <img src="https://hub.guuguo.top/assets/compare-caption-before.png?v=20261123v3" width="220" alt="红黑无框生肉" /> <img src="https://hub.guuguo.top/assets/compare-caption-after.png?v=20261123v3" width="220" alt="干净居中重排中文" /> |
 
 ---
 
