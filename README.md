@@ -1,62 +1,104 @@
 <div align="center">
 
-# MangaInlay (漫嵌)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://hub.guuguo.top/assets/mangainlay-banner-dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="https://hub.guuguo.top/assets/mangainlay-banner-light.png" />
+  <img src="https://hub.guuguo.top/assets/mangainlay-banner-light.png" alt="漫嵌 MangaInlay — 生肉漫画与条漫原位气泡嵌字翻译插件" width="100%" />
+</picture>
 
-**In-Place AI Manga & Webtoon Bubble Translator Chrome Extension**
+# 漫嵌 MangaInlay
 
-*生肉漫画与条漫原位气泡嵌字翻译 Chrome 扩展 — 不加方框遮挡画面，译文直接嵌进原本的气泡里*
+**生肉漫画与条漫实时原位气泡嵌字翻译浏览器插件 — 不贴白膏药，译文直接嵌进原本的气泡里**
 
-[![Official Website](https://img.shields.io/badge/Website-hub.guuguo.top%2Fmangainlay-0ea5e9?style=flat-square)](https://hub.guuguo.top/mangainlay)
-[![Latest Release](https://img.shields.io/badge/Download-v0.1.1%20(.zip)-22c55e?style=flat-square)](https://github.com/guuguo/MangaInlay/releases/latest)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-v0.1.2-0ea5e9?style=flat-square&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/jchdohdejkkonpocnjipingjgagfeibn)
+[![Edge Add-ons](https://img.shields.io/badge/Edge%20Add--ons-v0.1.2-0078d4?style=flat-square&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/iioeeclifijdikhefbihncbdngmlkmci)
+[![Official Website](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-hub.guuguo.top-e5432d?style=flat-square)](https://hub.guuguo.top/mangainlay)
+[![Store Release](https://img.shields.io/badge/%E5%95%86%E5%BA%97%E7%BA%BF%E4%B8%8A%E7%89%88-v0.1.2%20%E5%B7%B2%E4%B8%8A%E7%BA%BF-16a34a?style=flat-square)](https://chromewebstore.google.com/detail/jchdohdejkkonpocnjipingjgagfeibn)
+
+**简体中文** · [English](#english-summary)
+
+<br />
+
+<img src="https://hub.guuguo.top/assets/mangainlay-demo-github.gif" width="800" alt="漫嵌 MangaInlay 实机演示：滚动生肉页、墨迹浮现中文气泡、按住 Alt 看原图" />
 
 </div>
 
 ---
 
-![MangaInlay Before vs After](https://hub.guuguo.top/assets/mangainlay-hero.png)
+## 安装
 
-## Why MangaInlay?
+推荐直接从官方扩展商店安装，装完即用，自动更新（无需配置任何 API Key）：
 
-Most comic translation extensions slap opaque boxes over speech bubbles—covering up radial spikes, sound effects, and background artwork.
+- **Chrome 用户**：前往 [Chrome Web Store 安装 漫嵌 MangaInlay（v0.1.2）](https://chromewebstore.google.com/detail/jchdohdejkkonpocnjipingjgagfeibn)
+- **Edge 用户（国内免梯直装）**：前往 [Microsoft Edge Add-ons 安装 漫嵌 MangaInlay（v0.1.2）](https://microsoftedge.microsoft.com/addons/detail/iioeeclifijdikhefbihncbdngmlkmci)
+- **产品官网 & 在线演示**：[https://hub.guuguo.top/mangainlay](https://hub.guuguo.top/mangainlay)
 
-**MangaInlay** ([hub.guuguo.top/mangainlay](https://hub.guuguo.top/mangainlay)) keeps full-resolution image processing off the network: the backend returns only compact bubble coordinates and translated JSON, while the Chrome extension samples surrounding bubble colors and renders translated text directly on an offscreen HTML5 Canvas.
+<details>
+<summary>开发者 / 离线手动安装（.zip）</summary>
 
-### Key Features
+1. 从官网下载打包归档：[mangainlay-extension.zip](https://hub.guuguo.top/downloads/mangainlay-extension.zip)（本地源码目录 `extension/` 也可直接加载）。
+2. 解压到本地固定文件夹（请勿删除该文件夹）。
+3. 在地址栏打开 `chrome://extensions`（或 `edge://extensions`），开启右上角 **开发者模式**。
+4. 点击 **加载已解压的扩展程序**，选择解压后的目录即可。
 
-- **In-Place Canvas Erasure & Typesetting**: Samples bubble background colors locally, erases original text, and wraps translations to fit the actual bubble contour.
-- **Artwork & SFX Protection**:
-  - **Radial Starbursts**: Preserves spiky shout-bubble borders instead of clipping them with rectangles.
-  - **Tilted Signs & Handwritten SFX**: Keeps the original artwork intact and adds a perspective-matched parallel note beside the sign.
-- **Long-Strip Webtoon Streaming**: Slices tall webtoons into chunks, translates concurrently, and streams bubbles onto the page without blocking your screen.
-- **Scroll & Carousel Sync**: Tracks dynamic image transforms and horizontal page-turn transitions smoothly.
-- **17+ Languages & Cross-Device Sync**: Supports Google Sign-In, Email OTP, and LINUX DO Connect.
-
-![Radial Burst and Tilted Sign Protection](https://hub.guuguo.top/assets/mangainlay-artwork.png)
-
-![Non-Blocking Workflow](https://hub.guuguo.top/assets/mangainlay-workflow.png)
+</details>
 
 ---
 
-## Install & Try (v0.1.1)
+## 能做什么
 
-While Chrome Web Store review is pending, you can load the extension directly:
+- **本地原位无痕嵌字**：后端只返回紧凑的气泡坐标与译文 JSON，扩展在浏览器本地离屏 `<canvas>` 吸取底色、擦除原文并按气泡轮廓自适应排版；支持高宽比 `> 1.65` 自动日漫竖排与多字体矩阵。
+- **按住 `Alt` 秒看原图 & 流式预读**：读生肉时随时按住键盘 `Alt` 透出原文对照，松手恢复译文；条漫往下滑自动领先 2 屏并发预取。
 
-1. Download **`MangaInlay-v0.1.1.zip`** from [GitHub Releases](https://github.com/guuguo/MangaInlay/releases/latest) or [hub.guuguo.top/mangainlay](https://hub.guuguo.top/mangainlay) and unzip it to a permanent folder.
-2. Open `chrome://extensions` in Chrome or Edge.
-3. Enable **Developer mode** (top-right toggle).
-4. Click **Load unpacked** and select the unzipped folder.
-
-Includes **20 free uncached pages per day** (cached community pages do not consume quota).
+| 爆炸气泡不糊（日漫竖排） | 拟声词与倾斜门牌保留原画 | 多色无框字重排（繁/日/韩 → 简体） |
+| :---: | :---: | :---: |
+| <img src="https://hub.guuguo.top/assets/compare-burst-before.png" width="200" alt="爆炸气泡生肉" /> <img src="https://hub.guuguo.top/assets/compare-burst-after.png" width="200" alt="爆炸气泡中文嵌字" /> | <img src="https://hub.guuguo.top/assets/compare-sign-before.png" width="200" alt="倾斜门牌生肉" /> <img src="https://hub.guuguo.top/assets/compare-sign-after.png" width="200" alt="倾斜门牌平行旁注" /> | <img src="https://hub.guuguo.top/assets/compare-caption-before.png" width="220" alt="红黑无框生肉" /> <img src="https://hub.guuguo.top/assets/compare-caption-after.png" width="220" alt="干净居中重排中文" /> |
 
 ---
 
-## 中文简介（漫嵌 MangaInlay）
+## 额度与价格
 
-平时追日漫、韩漫、美漫生肉时，传统翻译工具常常直接在画面上盖一个方框，挡住人物和特效。
+所有口径与插件端、官网保持严格一致：
 
-**漫嵌（MangaInlay）** 在浏览器本地离屏 Canvas 完成底色取样、原文擦除和自适应排版，尽量还原汉化组嵌字效果：
+| 方案 | 价格 | 额度与权益 |
+| --- | --- | --- |
+| **免费体验** | `¥0` | 每日 **30 格**全新 AI 识别（约 1.5 话），首日首次使用额外加赠 **+30 格**（首日共 **60 格** ≈ 3 话）；免登录即用 |
+| **7 天畅看卡（推荐）** | **¥6.9** / 7 天 | 7 天内全站生肉无限翻译、4× 并发预取；爱发电微信 / 支付宝扫码付完自动轮询秒激活 |
+| **Pro 月卡** | **¥19** / 30 天（海外 **$4.9**/月） | 30 天无限畅读、跨设备账号同步（Google / LINUX DO）与优先调度通道 |
 
-- **本地无痕嵌字**：自动取气泡周边底色修补，连体气泡拆瓣填字，支持日漫竖排和白边描边字。
-- **保护原画与拟声词**：保留爆炸气泡放射刺，手绘拟声词与倾斜门牌按原角度和颜色旁注。
-- **长条漫流式渲染**：边滑边翻，不遮罩屏幕；命中云端共享缓存不扣每日免费次数。
-- **官网与社区**：[https://hub.guuguo.top/mangainlay](https://hub.guuguo.top/mangainlay)
+- **缓存 0 消耗承诺**：无论是你看过的**本地 IndexedDB 缓存**，还是其他漫迷已经翻好的**云端共享缓存**，命中时一律 **0 消耗（不扣每日额度，即使剩余 0 格也可秒开）**。
+- **拦截保护**：极少数被 AI 安全策略跳过的画面直接标为未处理，**同样不扣额度、不写脏缓存**。
+
+---
+
+## 隐私
+
+- 未命中缓存时，扩展仅对当前漫画长图做分段压缩并加密发送至后端（`https://mangainlay-api.guuguo.top`），交由 Gemini Vision 识别气泡 `box_2d` 与译文 JSON；**涂白与嵌字渲染全部在你的浏览器本地完成，不读取其他非漫画标签页**。
+- 云端共享缓存仅以图片哈希保存识别出的坐标与译文 JSON，用于二次访问秒开，**不长期留存原始漫画图片**。
+- 完整说明见 [隐私政策](https://mangainlay-api.guuguo.top/privacy)。
+
+---
+
+## 自部署后端
+
+欢迎 Star 或参考 `backend/` 自建轻量无图片回传的 JSON 翻译服务端：
+
+- **技术栈**：Node.js 22+ 原生 HTTP 服务（Cloud Run） + Vertex AI / Gemini Flash Vision JSON Schema + Firestore（可选）。
+- **本地运行测试**：
+
+```bash
+cd backend && npm test
+```
+
+- 将扩展设置页开启开发者模式（`options.html?dev=1`），即可指向你自己的后端地址与 `X-Translator-Token`。
+
+---
+
+## English Summary
+
+**MangaInlay** is an in-place Chrome & Edge extension that translates raw manga, manhwa, and long-strip webtoons directly inside their original speech bubbles without slapping opaque white boxes over artwork.
+
+- **Install**: [Chrome Web Store (v0.1.2)](https://chromewebstore.google.com/detail/jchdohdejkkonpocnjipingjgagfeibn) · [Edge Add-ons (v0.1.2)](https://microsoftedge.microsoft.com/addons/detail/iioeeclifijdikhefbihncbdngmlkmci) · [Homepage](https://hub.guuguo.top/mangainlay)
+- **Free Quota & Caching**: Free users get **30 uncached slices/day** (~1.5 chapters) plus a **+30 Day-1 welcome bonus** (60 slices on Day 1). **Both local IndexedDB cache and shared cloud cache hits deduct 0 quota**, and safety-blocked panels never deduct quota.
+- **Passes**: ¥6.9 / 7 days, ¥19 / 30 days, or $4.9 / month globally.
+- **Self-Hosting**: See `backend/` for the lightweight Google Cloud Run + Gemini Vision JSON service (`cd backend && npm test`).
