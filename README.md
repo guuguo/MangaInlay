@@ -31,6 +31,7 @@
 
 - **Chrome 用户**：前往 [Chrome Web Store 安装 漫嵌 MangaInlay（v0.1.2）](https://chromewebstore.google.com/detail/jchdohdejkkonpocnjipingjgagfeibn)
 - **Edge 用户（国内免梯直装）**：前往 [Microsoft Edge Add-ons 安装 漫嵌 MangaInlay（v0.1.2）](https://microsoftedge.microsoft.com/addons/detail/iioeeclifijdikhefbihncbdngmlkmci)
+- **Android 手机 / 平板（直装正式版 v0.1.0）**：[官网直链下载 APK](https://hub.guuguo.top/downloads/MangaInlay-Android-v0.1.0.apk) · [GitHub Releases（支持 Obtainium 追更）](https://github.com/guuguo/MangaInlay/releases/tag/android-v0.1.0)
 - **产品官网 & 在线演示**：[https://hub.guuguo.top/mangainlay](https://hub.guuguo.top/mangainlay)
 
 <details>
@@ -99,6 +100,7 @@ cd backend && npm test
 **MangaInlay** is an in-place Chrome & Edge extension that translates raw manga, manhwa, and long-strip webtoons directly inside their original speech bubbles without slapping opaque white boxes over artwork.
 
 - **Install**: [Chrome Web Store (v0.1.2)](https://chromewebstore.google.com/detail/jchdohdejkkonpocnjipingjgagfeibn) · [Edge Add-ons (v0.1.2)](https://microsoftedge.microsoft.com/addons/detail/iioeeclifijdikhefbihncbdngmlkmci) · [Homepage](https://hub.guuguo.top/mangainlay)
+- **Android App (v0.1.0)**: [Direct APK Download](https://hub.guuguo.top/downloads/MangaInlay-Android-v0.1.0.apk) · [GitHub Releases](https://github.com/guuguo/MangaInlay/releases/tag/android-v0.1.0)
 - **Free Quota & Caching**: Free users get **30 uncached slices/day** (~1.5 chapters) plus a **+30 Day-1 welcome bonus** (60 slices on Day 1). **Both local IndexedDB cache and shared cloud cache hits deduct 0 quota**, and safety-blocked panels never deduct quota.
 - **Passes**: ¥6.9 / 7 days, ¥19 / 30 days, or $4.9 / month globally.
 - **Self-Hosting**: See `backend/` for the lightweight Google Cloud Run + Gemini Vision JSON service (`cd backend && npm test`).
